@@ -1,0 +1,16 @@
+{
+  "name": "input-select",
+  "version": "1.0.0",
+  "author": "mahmoud bahaa mahmoudbahaa755@gmail.com",
+  "description": "this package is for making select input hidden and showing input field when user selects other option",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/jest": "^29.5.12"
+  }
+}

@@ -26,12 +26,14 @@ const {
     setSelectAllChecked,
     isHidden,
 } = useSelectFieldHook([
-    { item_type: true },
-    { item_name: true },
-    { uom_id: true },
+    { item: true },
+    { price: true },
+    { notes: true },
 ]);
 
 // Use the CustomCheckBox component in your render method
+return(
+    <>
 <CustomCheckBox
     data={checkboxData}
     selectAllChange={selectAllChange}
@@ -39,3 +41,5 @@ const {
     selectAll
     onChange={selectChange}
 />
+    </>
+)

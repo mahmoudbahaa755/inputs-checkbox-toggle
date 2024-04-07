@@ -28,24 +28,26 @@ interface CheckboxGroupProps {
   onChange: (value: string, checked: boolean) => void;
   selectAll?: boolean;
   selectAllChecked?: boolean;
+  label?: string;
   selectAllChange?: (data:{ label: string; value: string; checked: boolean }[]) => void;
 }
 
 const CustomCheckBox: React.FC<CheckboxGroupProps> = ({
   selectAllChange ,
   selectAllChecked,
+  label,
   data, onChange,selectAll 
 }) => {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', flexDirection: 'row' }}>
     {selectAll &&  <Checkbox
           
-          label={"select_all"}
+          label={label ||"select all"}
           checked={selectAllChecked?selectAllChecked: false}
           onChange={() => selectAllChange && selectAllChange(data)}
         />
      }
-      {data.map((item, index) => (
+      {data.map((item, index:number) => (
         <Checkbox
           key={index}
           label={item.label}

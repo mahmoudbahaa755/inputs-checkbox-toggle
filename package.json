@@ -1,17 +1,16 @@
 {
   "name": "inputs-checkbox-toggle",
-  "version": "1.0.0",
+  "version": "1.0.01",
   "author": "mahmoud bahaa mahmoudbahaa755@gmail.com",
   "description": "this package is for making select input hidden and showing input field when user selects other option",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["inputs","checkbox","toggle input visablity","toggle input","toggle checkbox"],
   "license": "ISC",
   "dependencies": {
-    "@testing-library/react-hooks": "^8.0.1",
-    "@types/jest": "^29.5.12"
+    "react": ">=15.0.0"
   },
   "repository": {
     "type": "git",

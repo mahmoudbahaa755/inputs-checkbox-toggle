@@ -1,12 +1,10 @@
 {
   "name": "inputs-checkbox-toggle",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "author": "mahmoud bahaa mahmoudbahaa755@gmail.com",
   "description": "this package is for making select input hidden and showing input field when user selects other option",
   "main": "/src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ 
   "keywords": ["inputs","checkbox","toggle input visablity","toggle input","toggle checkbox"],
   "license": "ISC",
   "dependencies": {

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import useSelectFieldHook from "../selectFields";
-import CustomCheckBox from "../CheckBox";
+import useSelectFieldHook from "../src/selectFields";
+import CustomCheckBox from "../src/CheckBox";
 
 export default function Additem() {
   const {

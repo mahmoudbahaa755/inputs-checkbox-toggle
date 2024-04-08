@@ -20,4 +20,4 @@ npm i inputs-checkbox-toggle
 ## Usage
 
 After installing the package, you can import it into your project and use it to create a toggle checkbox. 
-for a basic example look at:  [this simple example](https://github.com/mahmoudbahaa755/inputs-checkbox-toggle/blob/main/src/example/example.tsx)
+for a basic example look at:  [this simple example](https://github.com/mahmoudbahaa755/inputs-checkbox-toggle/blob/main/example/example.tsx)

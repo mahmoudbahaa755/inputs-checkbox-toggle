@@ -1,21 +1,17 @@
 import React from "react";
+import "./checkbox.css";
 interface CheckboxProps {
   label: string;
   checked: boolean;
- 
+  oneCheckBoxStyle?: string;
   onChange: () => void;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ label, checked, onChange }) => (
-  <div style={{ 
-  borderWidth: 1, 
-  borderColor: 'gray', 
-  borderRadius: '0.375rem', 
-  gap: '0.5rem', 
-  display: 'flex', 
-  padding: '0.5rem' 
-}}>
-  
+const Checkbox: React.FC<CheckboxProps> = ({ label,oneCheckBoxStyle, checked, onChange }) => (
+  <div
+
+   className={oneCheckBoxStyle || 'one-check-box'}
+  >
     <label>
       <input type="checkbox" checked={checked} onChange={onChange} />
       {label}
@@ -29,25 +25,32 @@ interface CheckboxGroupProps {
   selectAll?: boolean;
   selectAllChecked?: boolean;
   label?: string;
-  selectAllChange?: (data:{ label: string; value: string; checked: boolean }[]) => void;
+  className?: string;
+  oneCheckBoxStyle?: string;
+  selectAllChange?: (
+    data: { label: string; value: string; checked: boolean }[]
+  ) => void;
 }
 
 const CustomCheckBox: React.FC<CheckboxGroupProps> = ({
-  selectAllChange ,
+  selectAllChange,
   selectAllChecked,
   label,
-  data, onChange,selectAll 
+  data,
+  onChange,
+  selectAll,
+  className,
 }) => {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', flexDirection: 'row' }}>
-    {selectAll &&  <Checkbox
-          
-          label={label ||"select all"}
-          checked={selectAllChecked?selectAllChecked: false}
+    <div className={className || "check-box"}>
+      {selectAll && (
+        <Checkbox
+          label={label || "select all"}
+          checked={selectAllChecked ? selectAllChecked : false}
           onChange={() => selectAllChange && selectAllChange(data)}
         />
-     }
-      {data.map((item, index:number) => (
+      )}
+      {data.map((item, index: number) => (
         <Checkbox
           key={index}
           label={item.label}
@@ -57,6 +60,6 @@ const CustomCheckBox: React.FC<CheckboxGroupProps> = ({
       ))}
     </div>
   );
-}
+};
 
 export default CustomCheckBox;

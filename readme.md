@@ -3,6 +3,7 @@
 ## Description
 
 This package provides a toggle checkbox component for React applications. It allows you to show or hide input fields, enhancing the user experience by providing a cleaner UI. The code used in the demonstration GIF can be found in the 'Usage' section.
+[![npm version](https://badge.fury.io/js/inputs-checkbox-toggle.svg)](https://badge.fury.io/js/inputs-checkbox-toggle)
 <p align="center">
     <img src="example.gif" alt="Demo Gif">
 </p>

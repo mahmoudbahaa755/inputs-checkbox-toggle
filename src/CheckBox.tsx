@@ -9,7 +9,6 @@ interface CheckboxProps {
 
 const Checkbox: React.FC<CheckboxProps> = ({ label,oneCheckBoxStyle, checked, onChange }) => (
   <div
-
    className={oneCheckBoxStyle || 'one-check-box'}
   >
     <label>
@@ -32,6 +31,11 @@ interface CheckboxGroupProps {
   ) => void;
 }
 
+type checkBoxData={
+  label:string,
+  value:string,
+  checked:boolean
+}
 const CustomCheckBox: React.FC<CheckboxGroupProps> = ({
   selectAllChange,
   selectAllChecked,
@@ -50,7 +54,7 @@ const CustomCheckBox: React.FC<CheckboxGroupProps> = ({
           onChange={() => selectAllChange && selectAllChange(data)}
         />
       )}
-      {data.map((item, index: number) => (
+      {data.map((item:checkBoxData, index: number) => (
         <Checkbox
           key={index}
           label={item.label}
